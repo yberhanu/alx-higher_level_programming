@@ -15,4 +15,3 @@ elif l_digit == 0:
     print(" and is 0")
 else:
     print(" and is less than 6 and not 0")
-    
