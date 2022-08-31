@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <Python.h>
+
 void print_python_bytes(PyObject *p)
 {
 char *str;
@@ -34,9 +35,13 @@ printf("[*] Allocated = %lu\n", ((PyListObject *)p)->allocated);
 for (i = 0; i < PyList_Size(p); i++)
 {
 list = PySequence_GetItem(p, i);
+{
 printf("Element %lu: %s\n", i, list->ob_type->tp_name);
+}
 if (strcmp(list->ob_type->tp_name, "bytes") == 0)
+{
 print_python_bytes(list);
+}
 }
 }
 }
