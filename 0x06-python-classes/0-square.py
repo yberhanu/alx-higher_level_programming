@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Create Class """
+
 class Square:
-    """Class Square that defines a square."""
+    """ Empty Class """
     pass
